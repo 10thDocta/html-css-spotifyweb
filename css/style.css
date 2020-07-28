@@ -162,10 +162,14 @@ main {
   padding: 0 15px;
 }
 
+.main_row {
+  margin: 15px 0;
+}
+
 /* main_nav */
 .main_nav {
   /* altezza provvisoria */
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,6 +201,8 @@ main {
 
 /* FOOTER */
 footer {
+  position: relative;
+  z-index: 1;
   background-color: #282828;
   height: 80px;
 }
