@@ -191,12 +191,27 @@ main {
 .song_list__box {
   /* flex-shrink: 1; */
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
 }
 
 .song_list__img {
   width: 150px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .1);
+  display: none;
+}
+
+.song_list__box:hover .overlay {
+  display: block;
 }
 
 /* FOOTER */
