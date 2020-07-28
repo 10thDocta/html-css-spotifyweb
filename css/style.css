@@ -1,0 +1,123 @@
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+body {
+  font-family: 'Merriweather', serif;
+}
+
+a, a:focus, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* color */
+.grey {
+  color: #A3A3A3;
+}
+
+.white {
+  color: #fff;
+}
+
+/*********/
+/* wrapper */
+.wrapper_body {
+  height: calc(100vh - 80px);
+  display: flex;
+}
+
+.wrapper_body>aside {
+  flex-shrink: 0;
+}
+
+/* ASIDE */
+aside {
+  background: #000;
+  width: 230px;
+}
+
+aside p {
+  margin: 0;
+}
+
+.user>p {
+  border-bottom: 1px solid white;
+}
+
+.wrapper_aside {
+  width: 90%;
+  height: 100%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 60%;
+}
+
+.playlist {
+  overflow-y: auto;
+}
+
+/* MAIN */
+main {
+  background-color: #141922;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  overflow-y: auto;
+  padding-top: 80px;
+}
+
+.shade {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* width: 100%; */
+  width: calc(100% - 230px);
+  height: 80px;
+  line-height: 80px;
+  text-align: right;
+}
+
+.shade .btn {
+  margin-right: 30px;
+  padding: 10px 30px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.shade .btn:hover {
+  color: inherit;
+  padding: 12px 32px;
+  font-size: 13px;
+}
+
+.main_nav {
+  /* altezza provvisoria */
+  height: 50px;
+}
+
+.main_nav__link:hover::after {
+  content: '';
+  border-bottom: 3px solid lime;
+  width: 40%;
+  display: block;
+}
+
+/* FOOTER */
+footer {
+  background-color: #282828;
+  height: 80px;
+}
