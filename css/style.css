@@ -210,7 +210,7 @@ aside a:hover {
   }
 }
 
-.user span {
+.user>p:not(:first-child) span {
   color: #fff
 }
 
@@ -375,4 +375,90 @@ footer {
   z-index: 1;
   background-color: #282828;
   height: 70px;
+}
+
+.player {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.player__current_song, .player__controll, .player__volume {
+  margin: auto 0;
+}
+
+/* player current song */
+.player__current_song {
+  width: 25%;
+}
+
+.player__img {
+  width: 30px;
+}
+
+.player__current_song__icon {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.player__current_song__icon i {
+  width: 15px;
+}
+
+/* player__controll */
+.player__controll {
+  width: 50%;
+  text-align: center;
+}
+
+.player__controll_icon i {
+  width: 25px;
+  color: white;
+  vertical-align: middle;
+}
+
+.player__controll_icon i:hover {
+  color: #1db954;
+}
+
+.player__controll_icon .fa-play-circle {
+  font-size: 25px;
+}
+
+.player__controll_icon .fa-play-circle:hover {
+  font-size: 28px;
+}
+
+.time {
+  font-size: 10px;
+  color: white;
+}
+
+.bar {
+  display: inline-block;
+}
+
+.bar_light_grey, .bar_dark_grey {
+  display: inline-block;
+}
+
+.bar_light_grey {
+  width: 20%;
+  height: 4px;
+  margin-left: 10px;
+  border-radius: 4px;
+  background-color: red;
+}
+
+.bar_dark_grey {
+  width: 60%;
+  height: 4px;
+  margin-right: 10px;
+  margin-left: -5px;
+  border-radius: 4px;
+  background-color: grey;
+}
+
+.player__volume {
+  width: 25%;
 }
