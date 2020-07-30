@@ -138,8 +138,12 @@ aside a:hover {
 }
 
 @media screen and (min-width:786px) {
-  .aside_nav li:hover::before {
+  .aside_nav li::before {
     content: "";
+    border-left: 2px solid transparent;
+  }
+
+  .aside_nav li:hover::before {
     border-left: 2px solid #1db954;
     vertical-align: middle;
   }
@@ -190,7 +194,7 @@ aside a:hover {
 }
 
 .user>p {
-  padding: 5px 0;
+  padding: 7px 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -228,7 +232,8 @@ aside a:hover {
   }
 }
 
-/* MAIN */
+/*       ***      */
+/*      MAIN      */
 main {
   background-color: #141922;
   color: #fff;
@@ -288,9 +293,15 @@ main {
   align-items: center;
 }
 
+.main_nav__link::after {
+  content: '';
+  border-bottom: 3px solid transparent;
+}
+
+/* andrebbe fatto con un position absolute etc */
 .main_nav__link:hover::after {
   content: '';
-  border-bottom: 3px solid lime;
+  border-bottom: 3px solid #3A3A3A;
   width: 40%;
   display: block;
 }
@@ -317,6 +328,7 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 992px) {
@@ -337,6 +349,8 @@ main {
 
 .song_list__img {
   width: 100%;
+  /* display: block per rimuovere lo spazio sotto, altrimenti l'overlay sarà di 4px più alto */
+  display: block;
 }
 
 .overlay {
@@ -357,11 +371,11 @@ main {
 }
 
 .overlay__container i {
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .overlay__container i:hover {
-  font-size: 54px;
+  font-size: 64px;
   color: #1db954;
 }
 
@@ -369,7 +383,16 @@ main {
   display: block;
 }
 
-/* FOOTER */
+#popular .song_list__img {
+  border-radius: 50%;
+}
+
+#popular .overlay {
+  border-radius: 50%;
+}
+
+/*    ***    */
+/*   FOOTER  */
 footer {
   position: relative;
   z-index: 1;
@@ -383,17 +406,32 @@ footer {
   justify-content: space-between;
 }
 
+.player i:hover {
+  color: #1db954;
+  cursor: pointer;
+}
+
 .player__current_song, .player__controll, .player__volume {
   margin: auto 0;
 }
 
 /* player current song */
 .player__current_song {
-  width: 25%;
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player__img_container {
+  width: 25%
 }
 
 .player__img {
   width: 30px;
+}
+
+.player__album_title {
+  width: 50%
 }
 
 .player__current_song__icon {
@@ -415,10 +453,6 @@ footer {
   width: 25px;
   color: white;
   vertical-align: middle;
-}
-
-.player__controll_icon i:hover {
-  color: #1db954;
 }
 
 .player__controll_icon .fa-play-circle {
@@ -461,4 +495,15 @@ footer {
 
 .player__volume {
   width: 25%;
+}
+
+.player__volume_icon {
+  display: inline-block;
+  width: 20%;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.player__volume>.bar {
+  width: 70%;
 }
